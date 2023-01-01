@@ -14,6 +14,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 icon = Image.open('icon.png')
 st.set_page_config(page_title='Eye-Disease-Classifier', page_icon = icon)
 st.header('Eye Disease Classifier')
+st.sidebar.subheader(("Input a Disease Picture"))
 
 #Load Model
 def effNetb3():
@@ -48,7 +49,7 @@ def Predict(img):
 
 
 #Get Image
-file_up = st.file_uploader('Upload an Image', type = "png")
+file_up = st.sidebar.file_uploader('Upload an Image', type = "png")
 
 #Normalizing
 normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
