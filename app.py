@@ -65,7 +65,7 @@ data_transform = transforms.Compose([
 if file_up is not None:
     # display image that user uploaded
     image = Image.open(file_up).convert('RGB')
-    st.image(image, caption = 'Uploaded Image.', use_column_width = True)
+    st.image(image, caption = 'Uploaded Image.', use_column_width = False)
     st.write("")
     st.write("Just a second ...")
     img = data_transform(image)
