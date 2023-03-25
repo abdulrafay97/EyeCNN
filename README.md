@@ -1,1 +1,1 @@
-# Eye-Disease-Classification-FineTuned-EfficientNet-B3
+# EyeCNN
